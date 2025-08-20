@@ -17,7 +17,7 @@ A list of all generated variables can be found in the source files:
 
 ## Files to Review
 
-- Index.razor
+- [Index.razor](CS/DxThemeVariablesExample/Components/Pages/Index.razor)
 
 ## Documentation
 
