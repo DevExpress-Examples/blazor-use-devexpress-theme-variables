@@ -1,0 +1,80 @@
+﻿@page "/"
+@rendermode InteractiveServer
+@using DxThemeVariablesExample.Models
+
+<style>
+    :root {
+        --DS-color-border-utility-red-default-rest: #7e2811;
+    }
+
+    .myDiv {
+        font-size: var(--DS-font-size-body-1);
+        font-weight: var(--DS-font-weight-subtitle-2-stronger);
+        padding: var(--DS-border-radius-160);
+        background-color: var(--DS-utility-indigo-30);
+    }
+
+    .myDiv > h4 {
+        margin-top: var(--DS-border-radius-80);
+        margin-bottom: var(--DS-border-radius-80);
+    }
+
+    .myDiv .pDefault {
+        color: var(--DS-color-border-utility-blue-default-rest);
+    }
+
+    .myDiv .pOverride {
+        color: var(--DS-color-border-utility-red-default-rest);
+    }
+
+    .btnOverride {
+        --DS-color-surface-primary-default-rest: #6693f5;
+    }
+
+    .myDivGrid > p {
+        font-weight: var(--DS-font-weight-caption-1-strong);
+    }
+
+    .myGrid .dxbl-grid-header {
+        background-color: var(--DS-primary-100) !important;
+    }
+
+</style>
+
+<h1>Override Variable Example</h1>
+
+<div class="myDiv">
+    <h4> Standard Elements </h4>
+    <p class="pDefault"> This paragraph uses a default DevExpress variable for its font color ("--DS-color-border-utility-blue-default-rest"). </p>
+    <p class="pOverride"> This paragraph uses an overridden DevExpress variable for its font color ("--DS-color-border-utility-red-default-rest"). </p>
+    <br />
+    <p> Additionally, this section uses DevExpress variables for its font size, font weight, padding, and background color properties. </p>
+</div>
+
+<div>
+    <h4> Local Override </h4>
+    <p> You can also override DevExpress variables locally. These two buttons are both Primary buttons, but the second button's "--DS-color-surface-primary-default-rest" variable is overridden locally. </p>
+    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Primary"></DxButton>
+    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Overridden Primary" CssClass="btnOverride"></DxButton>
+</div>
+
+<div class="myDivGrid">
+    <h4> DevExpress Elements </h4>
+    <p> The Grid header uses a DevExpress accent color ("--DS-primary-100"). This paragraph also uses a DevExpress variable for its font weight ("--DS-font-weight-caption-1-strong"). </p>
+
+    <DxGrid Data="Customers" CssClass="myGrid">
+        <Columns>
+            <DxGridDataColumn Caption="Name" FieldName="Name" />
+            <DxGridDataColumn Caption="Age" FieldName="Age" />
+        </Columns>
+    </DxGrid>
+</div>
+
+@code
+{
+    List<Customer> Customers { get; set; } = new List<Customer>() {
+        new Customer() { Name = "John Smith", Age = 35 },
+        new Customer() { Name = "Anne Williams", Age = 40 },
+        new Customer() { Name = "Darren Park", Age = 25 }
+    };
+}
