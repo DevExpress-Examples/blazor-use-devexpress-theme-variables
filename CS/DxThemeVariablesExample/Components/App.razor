@@ -7,7 +7,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <base href="/" />
-    @DxResourceManager.RegisterTheme(Themes.Fluent)
+    @DxResourceManager.RegisterTheme(Themes.Fluent.Clone(properties => {
+        properties.Name = "Fluent Custom";
+        properties.AddFilePaths("css/custom/dx_variables.css");
+        properties.SetCustomAccentColor("#6dc88a");
+        properties.ApplyToPageElements = true;
+        }))
     @DxResourceManager.RegisterScripts()
     <link href=@AppendVersion("css/site.css") rel="stylesheet" />
     <link href=@AppendVersion("DxThemeVariablesExample.styles.css") rel="stylesheet" />

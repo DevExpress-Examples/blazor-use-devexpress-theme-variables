@@ -2,67 +2,40 @@
 @rendermode InteractiveServer
 @using DxThemeVariablesExample.Models
 
-<style>
-    :root {
-        --DS-color-border-utility-red-default-rest: #7e2811;
-    }
+<h1>DevExpress Design System</h1>
 
-    .myDiv {
-        font-size: var(--DS-font-size-body-1);
-        font-weight: var(--DS-font-weight-subtitle-2-stronger);
-        padding: var(--DS-border-radius-160);
-        background-color: var(--DS-utility-indigo-30);
-    }
+<p>This example illustrates how to stylize a Blazor application with use of DevExpress design system. 
+DevExpress components utilize various CSS variables for their styling. To make your application's look and feel consistent you can use the same variables to style native HTML elements
+or even override them to change the appearance of both: DevExpress components and native HTML elements</p>
 
-    .myDiv > h4 {
-        margin-top: var(--DS-border-radius-80);
-        margin-bottom: var(--DS-border-radius-80);
-    }
+<div class="customized-div">
+    <h4>Native HTML Elements</h4>
 
-    .myDiv .pDefault {
-        color: var(--DS-color-border-utility-blue-default-rest);
-    }
-
-    .myDiv .pOverride {
-        color: var(--DS-color-border-utility-red-default-rest);
-    }
-
-    .btnOverride {
-        --DS-color-surface-primary-default-rest: #6693f5;
-    }
-
-    .myDivGrid > p {
-        font-weight: var(--DS-font-weight-caption-1-strong);
-    }
-
-    .myGrid .dxbl-grid-header {
-        background-color: var(--DS-primary-100) !important;
-    }
-
-</style>
-
-<h1>Override Variable Example</h1>
-
-<div class="myDiv">
-    <h4> Standard Elements </h4>
-    <p class="pDefault"> This paragraph uses a default DevExpress variable for its font color ("--DS-color-border-utility-blue-default-rest"). </p>
-    <p class="pOverride"> This paragraph uses an overridden DevExpress variable for its font color ("--DS-color-border-utility-red-default-rest"). </p>
-    <br />
-    <p> Additionally, this section uses DevExpress variables for its font size, font weight, padding, and background color properties. </p>
+    <p> This section contains native HTML elements which use DevExpress variables for their font size, font weight, padding, and background color properties. Below are 
+        examples on how to apply default DevExpress styles or override them
+    </p>
+    <p class="hovered"> This paragraph applies DevExpress style on hover("<strong>--dxds-color-surface-primary-default-hovered</strong>"). </p>
+    <p class="utility-blue"> This paragraph applies "utility-blue" background("<strong>--dxds-color-surface-utility-blue-default-restt</strong>"). </p>
+    <p class="danger"> This paragraph applies "danger" font color("<strong>--dxds-color-content-danger-default-rest</strong>"). </p>
 </div>
 
 <div>
     <h4> Local Override </h4>
-    <p> You can also override DevExpress variables locally. These two buttons are both Primary buttons, but the second button's "--DS-color-surface-primary-default-rest" variable is overridden locally. </p>
+    <p> You can also override DevExpress variables locally. These two buttons are both Primary buttons, but the second button's
+        <strong>"--dxds-color-surface-primary-default-rest"</strong> variable is overridden locally.
+    </p>
     <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Primary"></DxButton>
-    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Overridden Primary" CssClass="btnOverride"></DxButton>
+    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Overridden Primary" CssClass="overriden"></DxButton>
 </div>
 
 <div class="myDivGrid">
     <h4> DevExpress Elements </h4>
-    <p> The Grid header uses a DevExpress accent color ("--DS-primary-100"). This paragraph also uses a DevExpress variable for its font weight ("--DS-font-weight-caption-1-strong"). </p>
+    <p>
+        The Grid header uses a DevExpress primary color <strong>("--dxds-color-surface-primary-default-rest")</strong> same as the native HTML element above, 
+        and highlights hovered rows with the similar style(<strong>"--dxds-color-surface-primary-default-hovered"</strong>).
+    </p>
 
-    <DxGrid Data="Customers" CssClass="myGrid">
+    <DxGrid Data="Customers" CssClass="customized-grid" HighlightRowOnHover="true">
         <Columns>
             <DxGridDataColumn Caption="Name" FieldName="Name" />
             <DxGridDataColumn Caption="Age" FieldName="Age" />
