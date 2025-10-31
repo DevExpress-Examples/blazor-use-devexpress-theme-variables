@@ -1,34 +1,34 @@
-﻿.customized-div {
+﻿.container-with-devexpress-styles {
     font-size: var(--dxds-font-size-base-md);
     font-weight: var(--dxds-font-weight-base-default);
     padding: var(--dxds-spacing-160);
     background-color: var(--dxds-color-surface-primary-default-rest);
 }
 
-    .customized-div strong {
+    .container-with-devexpress-styles strong {
         font-weight: var(--dxds-font-weight-base-stronger);
     }
 
-    .customized-div .utility-blue {
+    .container-with-devexpress-styles .utility-blue {
         background-color: var(--dxds-color-surface-utility-blue-default-rest);
     }
 
-    .customized-div .danger {
+    .container-with-devexpress-styles .danger {
         color: var(--dxds-color-content-danger-default-rest);
     }
 
-    .customized-div .hovered:hover {
+    .container-with-devexpress-styles .hovered:hover {
         background-color: var(--dxds-color-surface-primary-default-hovered)
     }
 
-.overriden {
+.btn-with-custom-background {
     --dxds-color-surface-primary-default-rest: var(--dxds-color-surface-utility-blue-default-rest);
 }
 
-.customized-grid {
+.grid-with-custom-styles {
     --dxds-color-surface-neutral-default-hovered: var(--dxds-color-surface-primary-default-hovered);
 }
 
-    .customized-grid table.dxbl-grid-table.dxbl-grid-row-hover-enabled tr.dxbl-grid-header-row th.dxbl-grid-header {
+    .grid-with-custom-styles table.dxbl-grid-table.dxbl-grid-row-hover-enabled tr.dxbl-grid-header-row th.dxbl-grid-header {
         background-color: var(--dxds-color-surface-primary-default-rest);
     }

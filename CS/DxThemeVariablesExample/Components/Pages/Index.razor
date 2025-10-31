@@ -8,7 +8,7 @@
 DevExpress components utilize various CSS variables for their styling. To make your application's look and feel consistent you can use the same variables to style native HTML elements
 or even override them to change the appearance of both: DevExpress components and native HTML elements</p>
 
-<div class="customized-div">
+<div class="container-with-devexpress-styles">
     <h4>Native HTML Elements</h4>
 
     <p> This section contains native HTML elements which use DevExpress variables for their font size, font weight, padding, and background color properties. Below are 
@@ -25,17 +25,17 @@ or even override them to change the appearance of both: DevExpress components an
         <strong>"--dxds-color-surface-primary-default-rest"</strong> variable is overridden locally.
     </p>
     <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Primary"></DxButton>
-    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Overridden Primary" CssClass="overriden"></DxButton>
+    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Overridden Primary" CssClass="btn-with-custom-background"></DxButton>
 </div>
 
-<div class="myDivGrid">
+<div>
     <h4> DevExpress Elements </h4>
     <p>
         The Grid header uses a DevExpress primary color <strong>("--dxds-color-surface-primary-default-rest")</strong> same as the native HTML element above, 
         and highlights hovered rows with the similar style(<strong>"--dxds-color-surface-primary-default-hovered"</strong>).
     </p>
 
-    <DxGrid Data="Customers" CssClass="customized-grid" HighlightRowOnHover="true">
+    <DxGrid Data="Customers" CssClass="grid-with-custom-styles" HighlightRowOnHover="true">
         <Columns>
             <DxGridDataColumn Caption="Name" FieldName="Name" />
             <DxGridDataColumn Caption="Age" FieldName="Age" />
