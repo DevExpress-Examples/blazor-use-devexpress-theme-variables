@@ -35,7 +35,7 @@ or even override them to change the appearance of both: DevExpress components an
         and highlights hovered rows with the similar style(<strong>"--dxds-color-surface-primary-default-hovered"</strong>).
     </p>
 
-    <DxGrid Data="Customers" CssClass="grid-with-custom-styles" HighlightRowOnHover="true">
+    <DxGrid Data="Customers" CssClass="grid-with-custom-styles" HighlightRowOnHover="true" CustomizeElement="OnCustomizeElement">
         <Columns>
             <DxGridDataColumn Caption="Name" FieldName="Name" />
             <DxGridDataColumn Caption="Age" FieldName="Age" />
@@ -50,4 +50,11 @@ or even override them to change the appearance of both: DevExpress components an
         new Customer() { Name = "Anne Williams", Age = 40 },
         new Customer() { Name = "Darren Park", Age = 25 }
     };
+    private void OnCustomizeElement(GridCustomizeElementEventArgs args)
+    {
+        if (args.ElementType == GridElementType.HeaderCell)
+        {
+            args.CssClass = "custom-grid-header";
+        }
+    }
 }

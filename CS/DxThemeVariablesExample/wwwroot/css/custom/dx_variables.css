@@ -29,6 +29,6 @@
     --dxds-color-surface-neutral-default-hovered: var(--dxds-color-surface-primary-default-hovered);
 }
 
-    .grid-with-custom-styles table.dxbl-grid-table.dxbl-grid-row-hover-enabled tr.dxbl-grid-header-row th.dxbl-grid-header {
-        background-color: var(--dxds-color-surface-primary-default-rest);
+    .grid-with-custom-styles .custom-grid-header {
+        background-color: var(--dxds-color-surface-primary-default-rest) !important;
     }
