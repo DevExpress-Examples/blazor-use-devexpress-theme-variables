@@ -70,7 +70,7 @@ You can override DevExpress CSS variables locally. In this example, both [DevExp
 
 ### Use DevExpress CSS Variables to Customize DevExpress Elements </h4>
 
-You can utilize DevExpress CSS variables to customize individual DevExpress elements. The [Grid](https://docs.devexpress.com/Blazor/403143/components/grid) below uses the Fluent theme *primary* color to change the appearance of header cells and hovered rows (via the [CustomizeElement](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxGrid.CustomizeElement))
+You can utilize DevExpress CSS variables to customize individual DevExpress elements. The [Grid](https://docs.devexpress.com/Blazor/403143/components/grid) below uses the Fluent theme *primary* color to change the appearance of header cells and hovered rows (via the [CustomizeElement](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxGrid.CustomizeElement) event):
 
 ```Razor
 <DxGrid Data="Customers"
@@ -121,4 +121,5 @@ private void OnCustomizeElement(GridCustomizeElementEventArgs args) {
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
 
