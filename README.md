@@ -1,3 +1,9 @@
+<!-- default badges list -->
+![](https://img.shields.io/endpoint?url=https://codecentral.devexpress.com/api/v1/VersionRange/1041123587/25.2.3%2B)
+[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1304606)
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+[![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
+<!-- default badges end -->
 # Blazor Fluent Themes - Use DevExpress CSS Variables
 
 This example customizes a Blazor application using DevExpress CSS variables available in Fluent themes. DevExpress Blazor components ship with a predefined set of CSS variables that define component appearance (once you apply a [Fluent theme](https://docs.devexpress.com/Blazor/401523/styling-and-themes/themes#apply-a-fluent-theme) to your application). You can use these DevExpress CSS variables as follows:
