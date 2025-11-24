@@ -2,33 +2,36 @@
     font-size: var(--dxds-font-size-base-md);
     font-weight: var(--dxds-font-weight-base-default);
     padding: var(--dxds-spacing-160);
-    background-color: var(--dxds-color-surface-primary-default-rest);
+    background-color: var(--dxds-color-surface-primary-subdued-rest);
 }
 
-    .container-with-devexpress-styles strong {
-        font-weight: var(--dxds-font-weight-base-stronger);
-    }
+.container-with-devexpress-styles strong {
+    font-weight: var(--dxds-font-weight-base-stronger);
+}
 
-    .container-with-devexpress-styles .utility-blue {
-        background-color: var(--dxds-color-surface-utility-blue-default-rest);
-    }
+.container-with-devexpress-styles .utility-blue {
+    background-color: var(--dxds-color-surface-utility-blue-default-rest);
+    color: var(--dxds-neutral-10);
+}
 
-    .container-with-devexpress-styles .danger {
-        color: var(--dxds-color-content-danger-default-rest);
-    }
+.container-with-devexpress-styles .danger {
+    color: var(--dxds-color-content-danger-default-rest);
+}
 
-    .container-with-devexpress-styles .hovered:hover {
-        background-color: var(--dxds-color-surface-primary-default-hovered)
-    }
+.container-with-devexpress-styles .hovered:hover {
+    background-color: var(--dxds-color-surface-primary-subdued-hovered);
+}
 
-.btn-with-custom-background {
-    --dxds-color-surface-primary-default-rest: var(--dxds-color-surface-utility-blue-default-rest);
+.button-with-custom-background {
+    --dxds-color-surface-primary-default-rest: var(--dxds-color-surface-utility-green-default-rest);
 }
 
 .grid-with-custom-styles {
     --dxds-color-surface-neutral-default-hovered: var(--dxds-color-surface-primary-default-hovered);
+    --dxds-color-content-neutral-default-hovered: var(--dxds-color-content-neutral-default-static-dark-hovered);
 }
 
-    .grid-with-custom-styles .custom-grid-header {
-        background-color: var(--dxds-color-surface-primary-default-rest) !important;
-    }
+.grid-with-custom-styles .custom-grid-header {
+    background-color: var(--dxds-color-surface-primary-default-rest) !important;
+    color: var(--dxds-color-content-neutral-default-static-dark-hovered) !important;
+}

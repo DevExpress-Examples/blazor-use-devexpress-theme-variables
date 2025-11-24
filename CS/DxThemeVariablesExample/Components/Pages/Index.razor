@@ -2,37 +2,48 @@
 @rendermode InteractiveServer
 @using DxThemeVariablesExample.Models
 
-<h1>DevExpress Design System</h1>
+<h1>Fluent Theme CSS Customization</h1>
 
-<p>This example illustrates how to stylize a Blazor application with use of DevExpress design system. 
-DevExpress components utilize various CSS variables for their styling. To make your application's look and feel consistent you can use the same variables to style native HTML elements
-or even override them to change the appearance of both: DevExpress components and native HTML elements</p>
+<p>
+    This example customizes a Blazor application using DevExpress CSS variables (available in Fluent themes only).
+    These CSS variables define the appearance of all DevExpress Blazor components once you apply a Fluent theme to your application.
+    You can use or override DevExpress CSS variables to style native HTML elements or built-in DevExpress Blazor components.
+</p>
 
 <div class="container-with-devexpress-styles">
-    <h4>Native HTML Elements</h4>
+    <h4>Use DevExpress CSS Variables to Style Native HTML Elements</h4>
 
-    <p> This section contains native HTML elements which use DevExpress variables for their font size, font weight, padding, and background color properties. Below are 
-        examples on how to apply default DevExpress styles or override them
+    <p>This section contains native HTML elements that use DevExpress CSS variables to customize background and text colors, font settings, and paddings.</p>
+    <p class="hovered">
+        This paragraph uses the Fluent theme <i>primary</i> background color on hover.
     </p>
-    <p class="hovered"> This paragraph applies DevExpress style on hover("<strong>--dxds-color-surface-primary-default-hovered</strong>"). </p>
-    <p class="utility-blue"> This paragraph applies "utility-blue" background("<strong>--dxds-color-surface-utility-blue-default-restt</strong>"). </p>
-    <p class="danger"> This paragraph applies "danger" font color("<strong>--dxds-color-content-danger-default-rest</strong>"). </p>
+    <p class="utility-blue">
+        This paragraph uses the <i>utility-blue</i> background color.
+    </p>
+    <p class="danger">
+        This paragraph uses the <i>danger</i> text color.
+    </p>
 </div>
 
 <div>
-    <h4> Local Override </h4>
-    <p> You can also override DevExpress variables locally. These two buttons are both Primary buttons, but the second button's
-        <strong>"--dxds-color-surface-primary-default-rest"</strong> variable is overridden locally.
-    </p>
-    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Primary"></DxButton>
-    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Overridden Primary" CssClass="btn-with-custom-background"></DxButton>
-</div>
+    <h4>Override DevExpress CSS Variables Locally</h4>
 
-<div>
-    <h4> DevExpress Elements </h4>
     <p>
-        The Grid header uses a DevExpress primary color <strong>("--dxds-color-surface-primary-default-rest")</strong> same as the native HTML element above, 
-        and highlights hovered rows with the similar style(<strong>"--dxds-color-surface-primary-default-hovered"</strong>).
+        You can override DevExpress CSS variables locally. The following buttons (<code>DxButton</code> components) utilize the Fluent theme <i>primary</i> color scheme:
+        <ul>
+            <li>The first button uses the default background color.</li>
+            <li>The second button uses the overridden background color.</li>
+        </ul>
+    </p>
+
+    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Default Primary"></DxButton>
+    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Overridden Primary" CssClass="button-with-custom-background"></DxButton>
+</div>
+
+<div>
+    <h4> Use DevExpress CSS Variables to Customize DevExpress Elements </h4>
+    <p>
+        You can use DevExpress CSS variables to customize individual DevExpress elements. The Grid below uses the Fluent theme <i>primary</i> color to change the appearance of header cells and hovered rows.
     </p>
 
     <DxGrid Data="Customers" CssClass="grid-with-custom-styles" HighlightRowOnHover="true" CustomizeElement="OnCustomizeElement">
@@ -43,17 +54,14 @@ or even override them to change the appearance of both: DevExpress components an
     </DxGrid>
 </div>
 
-@code
-{
+@code {
     List<Customer> Customers { get; set; } = new List<Customer>() {
         new Customer() { Name = "John Smith", Age = 35 },
         new Customer() { Name = "Anne Williams", Age = 40 },
         new Customer() { Name = "Darren Park", Age = 25 }
     };
-    private void OnCustomizeElement(GridCustomizeElementEventArgs args)
-    {
-        if (args.ElementType == GridElementType.HeaderCell)
-        {
+    private void OnCustomizeElement(GridCustomizeElementEventArgs args) {
+        if(args.ElementType == GridElementType.HeaderCell) {
             args.CssClass = "custom-grid-header";
         }
     }
