@@ -4,7 +4,7 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 [![](https://img.shields.io/badge/💬_Leave_Feedback-feecdd?style=flat-square)](#does-this-example-address-your-development-requirementsobjectives)
 <!-- default badges end -->
-# Blazor Fluent Themes - Use DevExpress CSS Variables
+# Blazor - Use CSS Variables to Customize DevExpress Fluent Themes
 
 This example customizes a Blazor application using DevExpress CSS variables available in Fluent themes. DevExpress Blazor components ship with a predefined set of CSS variables that define component appearance (once you apply a [Fluent theme](https://docs.devexpress.com/Blazor/401523/styling-and-themes/themes#apply-a-fluent-theme) to your application). You can use these DevExpress CSS variables as follows:
 * Style native HTML elements to maintain a consistent look across your application.
@@ -14,7 +14,7 @@ This example customizes a Blazor application using DevExpress CSS variables avai
 
 ## Implementation Details
 
-This example customizes native HTML and built-in DevExpress elements using CSS classes. The example stores CSS rules in a separate [dx-variables.css](./CS/DxThemeVariablesExample/wwwroot/css/custom/dx_variables.css) stylesheet and passes it as a parameter to the [AddFilePath](https://docs.devexpress.com/Blazor/DevExpress.Blazor.ThemeProperties.AddFilePaths(System.String--)) method during Fluent theme registration.
+This example customizes native HTML and DevExpress elements using CSS classes. The example stores CSS rules in a separate [dx-variables.css](./CS/DxThemeVariablesExample/wwwroot/css/custom/dx_variables.css) stylesheet and passes it as a parameter to the [AddFilePath](https://docs.devexpress.com/Blazor/DevExpress.Blazor.ThemeProperties.AddFilePaths(System.String--)) method when you register a Fluent theme.
 
 ### Use DevExpress CSS Variables to Style Native HTML Elements
 
@@ -23,11 +23,11 @@ This example assigns the folowing CSS classes to native HTML elements:
 * `<div class="container-with-devexpress-styles">`  
    Changes background color, font settings, and paddings.
 * `<p class="hovered">`  
-   Uses the Fluent theme *primary* background color on hover.
+   Applies the Fluent theme's *primary* background color on hover.
 * `<p class="utility-blue">`  
-   Uses the *utility-blue* background color and *neutral* text color.
+   Applies the *utility-blue* background color and *neutral* text color.
 * `<p class="danger">`  
-   Uses the *danger* text color.
+   Applies the *danger* text color.
 
 ```CSS
 .container-with-devexpress-styles {
@@ -55,9 +55,9 @@ This example assigns the folowing CSS classes to native HTML elements:
 }
 ```
 
-### Override DevExpress CSS Variables Locally
+### Use CSS Variables for Style Isolation
 
-You can override DevExpress CSS variables locally. In this example, both [DevExpress Blazor Buttons](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxButton) utilize the Fluent theme *primary* [color scheme](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxButton.RenderStyle):
+You can use DevExpress CSS variables for style isolation. In this example, both [DevExpress Blazor Buttons](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxButton) utilize the Fluent theme's *primary* [color scheme](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxButton.RenderStyle):
 * The first button uses the default background color.
 * The second button uses the overridden background color.
 
@@ -74,9 +74,9 @@ You can override DevExpress CSS variables locally. In this example, both [DevExp
 }
 ```
 
-### Use DevExpress CSS Variables to Customize DevExpress Elements </h4>
+### Use DevExpress CSS Variables to Customize Elements Within DevExpress Components
 
-You can utilize DevExpress CSS variables to customize individual DevExpress elements. The [Grid](https://docs.devexpress.com/Blazor/403143/components/grid) below uses the Fluent theme *primary* color to change the appearance of header cells and hovered rows (via the [CustomizeElement](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxGrid.CustomizeElement) event):
+You can utilize DevExpress CSS variables to customize individual elements within DevExpress components. The [Grid](https://docs.devexpress.com/Blazor/403143/components/grid) below uses the Fluent theme *primary* color to change header cell and hovered row appearance (via the [CustomizeElement](https://docs.devexpress.com/Blazor/DevExpress.Blazor.DxGrid.CustomizeElement) event):
 
 ```Razor
 <DxGrid Data="Customers"
@@ -127,5 +127,6 @@ private void OnCustomizeElement(GridCustomizeElementEventArgs args) {
 
 (you will be redirected to DevExpress.com to submit your response)
 <!-- feedback end -->
+
 
 
