@@ -26,18 +26,21 @@
 </div>
 
 <div>
-    <h4>Override DevExpress CSS Variables Locally</h4>
+    <h4>Use CSS Variables for Style Isolation</h4>
 
     <p>
-        You can override DevExpress CSS variables locally. The following buttons (<code>DxButton</code> components) utilize the Fluent theme <i>primary</i> color scheme:
+        You can use DevExpress CSS variables for style isolation. The following buttons (<code>DxButton</code> components) utilize the Fluent theme <i>primary</i> color scheme:
         <ul>
             <li>The first button uses the default background color.</li>
             <li>The second button uses the overridden background color.</li>
         </ul>
     </p>
 
-    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Default Primary"></DxButton>
-    <DxButton RenderStyle="ButtonRenderStyle.Primary" Text="Overridden Primary" CssClass="button-with-custom-background"></DxButton>
+    <DxButton RenderStyle="ButtonRenderStyle.Primary"
+              Text="Default Primary"></DxButton>
+    <DxButton RenderStyle="ButtonRenderStyle.Primary"
+              Text="Overridden Primary"
+              CssClass="button-with-custom-background"></DxButton>
 </div>
 
 <div>
