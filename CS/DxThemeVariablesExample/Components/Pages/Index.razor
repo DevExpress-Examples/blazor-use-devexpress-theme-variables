@@ -49,7 +49,10 @@
         You can use DevExpress CSS variables to customize individual DevExpress elements. The Grid below uses the Fluent theme <i>primary</i> color to change the appearance of header cells and hovered rows.
     </p>
 
-    <DxGrid Data="Customers" CssClass="grid-with-custom-styles" HighlightRowOnHover="true" CustomizeElement="OnCustomizeElement">
+    <DxGrid Data="Customers"
+            CssClass="grid-with-custom-styles"
+            HighlightRowOnHover="true"
+            CustomizeElement="OnCustomizeElement">
         <Columns>
             <DxGridDataColumn Caption="Name" FieldName="Name" />
             <DxGridDataColumn Caption="Age" FieldName="Age" />
