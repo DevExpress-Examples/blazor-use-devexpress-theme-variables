@@ -6,11 +6,13 @@
 <!-- default badges end -->
 # Blazor - Use CSS Variables to Customize DevExpress Fluent Themes
 
-This example customizes a Blazor application using DevExpress CSS variables available in Fluent themes. DevExpress Blazor components ship with a predefined set of CSS variables that define component appearance (once you apply a [Fluent theme](https://docs.devexpress.com/Blazor/401523/styling-and-themes/themes#apply-a-fluent-theme) to your application). You can use these DevExpress CSS variables as follows:
+This example customizes a DevExpress-powered Blazor application using DevExpress CSS variables available in Fluent themes. DevExpress Blazor components ship with a predefined set of CSS variables that define component appearance (once you apply a [Fluent theme](https://docs.devexpress.com/Blazor/401523/styling-and-themes/themes#apply-a-fluent-theme) to your application). You can use these DevExpress CSS variables as follows:
 * Style native HTML elements to maintain a consistent look across your application.
 * Customize built-in DevExpress Blazor components.
 
 ![Blazor - Use DevExpress Theme Variables](images/blazor-use-devexpress-theme-variables.png)
+
+Refer to the [Design System](https://docs.devexpress.devx/DesignSystem/405636/foundation) help topics to learn more about key styling principles and see full lists of CSS variables available in DevExpress Blazor Fluent themes.
 
 ## Implementation Details
 
@@ -117,6 +119,8 @@ private void OnCustomizeElement(GridCustomizeElementEventArgs args) {
 
 ## Documentation
 
+- [Design System Foundation](https://docs.devexpress.devx/DesignSystem/405636/foundation)
+- [CSS Variables in DevExpress Blazor Fluent Themes](https://docs.devexpress.com/Blazor/405705/styling-and-themes/fluent-theme-customization/fluent-css-variables)
 - [CSS Customization: Inspect CSS Rules](https://docs.devexpress.com/GeneralInformation/404498/css-customization/inspect-css-rules)
 - [Styling and Themes: Customize a Theme](https://docs.devexpress.com/Blazor/401523/styling-and-themes/themes#customize-a-theme-add-stylesheets)
 
