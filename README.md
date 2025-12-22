@@ -12,7 +12,7 @@ This example customizes a DevExpress-powered Blazor application using DevExpress
 
 ![Blazor - Use DevExpress Theme Variables](images/blazor-use-devexpress-theme-variables.png)
 
-Refer to the [Design System](https://docs.devexpress.devx/DesignSystem/405636/foundation) help topics to learn more about key styling principles and see full lists of CSS variables available in DevExpress Blazor Fluent themes.
+Refer to the [Design System](https://docs.devexpress.com/DesignSystem/405636/foundation) help topics to learn more about key styling principles and see full lists of CSS variables available in DevExpress Blazor Fluent themes.
 
 ## Implementation Details
 
@@ -119,7 +119,7 @@ private void OnCustomizeElement(GridCustomizeElementEventArgs args) {
 
 ## Documentation
 
-- [Design System Foundation](https://docs.devexpress.devx/DesignSystem/405636/foundation)
+- [Design System Foundation](https://docs.devexpress.com/DesignSystem/405636/foundation)
 - [CSS Variables in DevExpress Blazor Fluent Themes](https://docs.devexpress.com/Blazor/405705/styling-and-themes/fluent-theme-customization/fluent-css-variables)
 - [CSS Customization: Inspect CSS Rules](https://docs.devexpress.com/GeneralInformation/404498/css-customization/inspect-css-rules)
 - [Styling and Themes: Customize a Theme](https://docs.devexpress.com/Blazor/401523/styling-and-themes/themes#customize-a-theme-add-stylesheets)
